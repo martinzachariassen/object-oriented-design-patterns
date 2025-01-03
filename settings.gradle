@@ -3,4 +3,5 @@ rootProject.name = 'object-oriented-design-patterns'
 include 'FactoryMethod'
 include 'Singleton'
 include 'Builder'
+include 'Prototype'
 
