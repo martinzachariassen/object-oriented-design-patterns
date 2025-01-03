@@ -6,16 +6,14 @@
 3. [Key Components](#key-components)
 4. [How It Works](#how-it-works)
 5. [Benefits of the Factory Method Pattern](#benefits-of-the-factory-method-pattern)
-6. [Limitations of the Factory Method Pattern](#Limitations of the Factory Method Pattern)
+6. [Limitations of the Factory Method Pattern](#limitations-of-the-factory-method-pattern)
 7. [Code Structure](#code-structure)
 8. [References](#references)
 
----
 
 ## Introduction
 This project demonstrates the **Factory Method Design Pattern** by simulating a pizza shop. The Factory Method is used to create various types of pizzas without specifying their exact classes, ensuring flexibility and scalability in the code.
 
----
 
 ## Design Overview
 The Factory Method Pattern is a creational design pattern that provides an interface for creating objects, allowing subclasses to alter the type of objects that will be created.
@@ -24,25 +22,23 @@ In this project:
 - A pizza shop can create different types of pizzas (e.g., Margherita, Pepperoni, Veggie) based on customer orders.
 - The creation logic is encapsulated in a factory, promoting loose coupling between the client code and the product creation logic.
 
----
 
 ## Key Components
-### 1. **Pizza Interface**
+#### 1. **Pizza Interface**
 Defines the contract for all pizza types, ensuring consistency in behavior.
 
-### 2. **Concrete Pizza Classes**
+#### 2. **Concrete Pizza Classes**
 Specific types of pizzas (`MargheritaPizza`, `PepperoniPizza`, `VeggiePizza`) implement the `Pizza` interface.
 
-### 3. **Abstract Factory Class**
+#### 3. **Abstract Factory Class**
 Defines the method for creating pizzas (`createPizza`) and the ordering process (`orderPizza`).
 
-### 4. **Concrete Factory Class**
+#### 4. **Concrete Factory Class**
 Implements the creation logic for specific pizza types based on the order.
 
-### 5. **Pizza Shop Simulation**
+#### 5. **Pizza Shop Simulation**
 A `main` class demonstrates how the Factory Method Pattern works in practice.
 
----
 
 ## How It Works
 1. The `PizzaFactory` defines the `createPizza` method, which subclasses override to provide specific pizza creation logic.
@@ -50,7 +46,6 @@ A `main` class demonstrates how the Factory Method Pattern works in practice.
 3. The `SimplePizzaFactory` is the concrete factory that decides which `Pizza` subclass to instantiate based on the input type.
 4. When the `PizzaShop` simulation runs, customers place orders, and the factory creates and prepares the appropriate pizza type.
 
----
 
 ## Benefits of the Factory Method Pattern
 - **Encapsulation of Creation Logic**: The creation logic is centralized in the factory, reducing redundancy.
@@ -60,7 +55,6 @@ A `main` class demonstrates how the Factory Method Pattern works in practice.
     - **Single Responsibility Principle**: Each class has a well-defined purpose.
 - **Loose Coupling**: The client code depends on abstractions, not concrete implementations.
 
----
 
 ## Limitations of the Factory Method Pattern
 - **Increased Complexity**:
@@ -74,7 +68,7 @@ A `main` class demonstrates how the Factory Method Pattern works in practice.
     - While the factory decouples client code from the concrete product, it can introduce coupling between the factory and the concrete classes, especially if the factory logic becomes too rigid.
 - **Not Always Intuitive for Beginners**:
     - Understanding and implementing factory methods may be challenging for developers new to design patterns, leading to potential misuse or misunderstanding of the pattern.
----
+
 
 ## Code Structure
 ```editorconfig
@@ -95,10 +89,7 @@ FactoryMethod/
 ├── README.md                           # Project documentation
 ```
 
----
 
 ## References
 - [Factory Method Design Pattern - Refactoring Guru](https://refactoring.guru/design-patterns/factory-method)
 - [Java Documentation: Abstract Classes vs Interfaces](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
-
----
