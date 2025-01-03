@@ -8,6 +8,7 @@
 5. [Benefits of the Factory Method Pattern](#benefits-of-the-factory-method-pattern)
 6. [Limitations of the Factory Method Pattern](#limitations-of-the-factory-method-pattern)
 7. [Code Structure](#code-structure)
+8. [Key Differences Between Builder and Factory](#key-differences-between-builder-and-factory)
 8. [References](#references)
 
 
@@ -88,7 +89,24 @@ FactoryMethod/
 │   └── test/                           # Unit tests for the project
 ├── README.md                           # Project documentation
 ```
+## Key Differences Between Builder and Factory
 
+| **Aspect**         | **Builder**                                              | **Factory**                                         |
+|---------------------|----------------------------------------------------------|----------------------------------------------------|
+| **Purpose**         | Constructs a **complex object** step by step.            | Creates and returns an object, often choosing a subclass. |
+| **Object Complexity** | Handles objects with **many optional parameters** or steps. | Handles objects with **simple or dynamic types**.  |
+| **Focus**           | Focused on **how** the object is constructed.            | Focused on **what** type of object is created.     |
+| **Result**          | Always returns the **same type** of object.              | Can return **different types** of objects.         |
+| **Examples**        | Building a house, car, or configuration object.          | Creating shapes, vehicles, or database connections. |
+
+
+### How to Choose
+
+1. **If the object has many configurable parameters or requires a complex construction process:**
+   Use the **Builder Pattern**.
+
+2. **If the object creation depends on logic to decide which type or subclass to instantiate:**
+   Use the **Factory Pattern**.
 
 ## References
 - [Factory Method Design Pattern - Refactoring Guru](https://refactoring.guru/design-patterns/factory-method)
